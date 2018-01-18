@@ -1,0 +1,89 @@
+body {
+    padding: 40px;
+    background: #9b9b9b;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .6);
+    overflow: auto;
+}
+
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+caption {
+    text-align: left;
+    padding: 24px 0 39px 2.2%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+tr:hover {
+    background: #eeeeee;
+}
+
+td,
+th {
+    padding: 17px 10px;
+    border-bottom: 1px solid rgba(151, 151, 151, .3);
+}
+
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+}
+
+.footer {
+    padding: 20px;
+    font-size: 12px;
+    text-align: right;
+    color: #8c8c8c;
+}
+
+select {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #8c8c8c;
+}
+
+.footer a:first-child {
+    margin-right: 50px;
+}
+
+.footer .total-registros {
+    margin: 0 40px;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        padding: 20px;
+    }
+    
+   .footer {
+       padding: 21px 0 28px 0;
+       text-align: center;
+   }
+
+   span {
+       width: 100%;
+       display: block;
+   }
+
+   .footer .total-registros {
+       margin: 10px 0;
+   }
+
+   .footer a:first-child {
+       margin-right: 130px;
+   }
+}

@@ -1,0 +1,64 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+.container{
+	text-align: center;
+}
+
+.logo-pm{
+	margin: 25px 0;
+}
+
+ul{
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+
+li{
+	padding: 0 10px;
+	list-style-type: none;
+	margin-bottom: 40px;
+}
+
+li img{
+	width: 100%;
+}
+
+li p{
+	margin: 5px 0;
+	font-size: 20px;
+	font-weight: 500;
+	color: #4a4a4a;
+	text-align: left;
+	text-transform: uppercase;
+	
+}
+
+/* DESKTOP*/
+
+@media screen and (min-width: 560px){
+	.container{
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	
+	li{
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+@media screen and (min-width: 760px){
+	
+	li{
+		width: 33.33%;
+		padding: 0 10px;
+	}
+}

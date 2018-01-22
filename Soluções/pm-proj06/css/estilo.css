@@ -1,0 +1,53 @@
+body{
+	padding: 10px;
+}
+
+h1{
+	text-align: center;
+	/* 
+	Técnica image replacement 
+	Essa é uma técnica utilizada para substituir textos por imagens a fim de não se utilizar tags img's desnecessárias. A técnica consiste em aplicar a imagem como background do container do texto e esconder o texto. 
+	Mas por que usar: 
+	Imagine um site grande com várias paginas onde os títulos foram escritos usando uma fonte maluca, criada pelo designer, nesta caso se teria que usar uma imagem no lugar do texto. Agora imagine um cenário onde tivessemos que alterar todos os títulos das páginas para outra fonte. Você teria que percorrer todo o código atrás das tags img's e substituir a imagem por um texto. Utilizando o image replacement tudo que você teria que fazer é desabilitar a imagem de fundo e mostrar o texto. 
+	Outro ponto positivo é que os robos de busca indexam o texto escondido assim como os ALT's das tags img, então não terá perda de performance.
+	Desvantagem: Os robos de busca não vão indexar a imagem
+	*/
+	background-image: url(../img/logo-playcode.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+h1 span{
+	visibility: hidden;/* Esconde o texto do h1 */
+}
+
+.card{
+	margin-bottom: 30px;
+}
+
+.card img{
+	width: 100%;
+}
+
+.card h2{
+	margin: 0;
+	color: #4a4a4a;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiesed;
+}
+
+@media (min-width: 500px){
+	.container{
+		width: 960px;
+		margin: 0 auto;
+	}
+	
+	.card{
+		width: 300px;
+		padding-right: 20px;
+		float: left;
+	}
+}

@@ -11,7 +11,6 @@ body {
     overflow: auto;
 }
 
-
 table {
     width: 100%;
     text-align: center;
@@ -21,7 +20,7 @@ table {
 
 caption {
     text-align: left;
-    padding: 24px 0 39px 2.2%;
+    padding: 24px 0 39px 3%;
     font-size: 20px;
     font-weight: 500;
 }
@@ -30,11 +29,18 @@ tr:hover {
     background: #eeeeee;
 }
 
+th{
+	font-size: 14px;
+}
+
 td,
 th {
     padding: 17px 10px;
     border-bottom: 1px solid rgba(151, 151, 151, .3);
+	text-align: left;
 }
+
+td:first-child, th:first-child{width: 80px; text-align: center;}
 
 input[type="checkbox"] {
     width: 17px;
@@ -69,6 +75,8 @@ select {
         padding: 20px;
     }
     
+	th{text-align: center;}
+	
    .footer {
        padding: 21px 0 28px 0;
        text-align: center;

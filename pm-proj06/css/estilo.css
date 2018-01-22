@@ -1,3 +1,8 @@
+/*
+Alterações: 
+	Aplicação da técnica image replacement
+	Substituição da tag p por h2 nos titulos dos cards
+*/
 *{
 	box-sizing: border-box;
 }
@@ -6,31 +11,31 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
-.container{
+h1{
 	text-align: center;
+	background: url(../img/logo-playcode.png) no-repeat center;
 }
 
-.logo-pm{
-	margin: 25px 0;
+h1 span{
+	visibility: hidden;
 }
 
 ul{
 	padding: 0;
 	margin: 0;
-	font-size: 0;
 }
 
 li{
 	padding: 0 10px;
 	list-style-type: none;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 li img{
 	width: 100%;
 }
 
-li p{
+li h2{
 	margin: 5px 0;
 	font-size: 20px;
 	font-weight: 500;
@@ -41,7 +46,6 @@ li p{
 }
 
 /* DESKTOP*/
-
 @media screen and (min-width: 560px){
 	.container{
 		max-width: 960px;
@@ -50,13 +54,13 @@ li p{
 	
 	li{
 		width: 50%;
+		margin-right: -3px;
 		display: inline-block;
 		vertical-align: top;
 	}
 }
 
-@media screen and (min-width: 760px){
-	
+@media screen and (min-width: 800px){
 	li{
 		width: 33.33%;
 		padding: 0 10px;

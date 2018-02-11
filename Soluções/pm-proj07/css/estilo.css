@@ -1,0 +1,113 @@
+body{
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.botao{
+	text-decoration: none;
+	background-color: #ff397e;
+	display: block;
+	padding: 15px 0;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0 6px 0 0 #a32751;
+	font-size: 36px;
+	border-radius: 3px;
+}
+
+header{
+	margin-bottom: -90px;
+}
+
+header h1{
+	margin: 0;
+	background: url(../img/logo-titum.png) no-repeat;
+	width: 176px;
+	height: 76px;
+	margin-top: 10px;
+}
+
+header h1 span{
+	visibility: hidden;
+}
+
+header nav ul{
+	padding-right: 60px;
+	margin: 0;
+	margin-top: 20px;
+}
+
+header nav li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 80px;
+}
+
+header nav li:last-child{
+	border: 1px solid #fff;
+	border-radius: 3px;
+	padding: 10px 30px;
+}
+
+header nav li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#topo{
+	height: 700px;
+	background: url(../img/bg-topo.png) no-repeat;
+	background-size: cover;
+}
+
+#topo .chamada{
+	color: #fff;
+	margin-top: 200px;
+	text-align: center;
+}
+
+#topo .chamada h2{
+	margin: 0 0 10px;
+	font-size: 50px;
+	font-weight: 700;
+}
+
+#topo .chamada p{
+	margin: 0 0 20px;
+	font-size: 36px;
+	font-weight: 300;
+}
+
+#conheca{
+	padding: 70px;
+}
+
+#conheca .texto{
+	padding: 25px 60px 0;
+}
+
+#conheca .texto h2{
+	font-size: 36px;
+}
+
+#conheca .texto p{
+	font-size: 24px;
+}
+
+@media (max-width: 600px){
+	header nav{
+		display: none;
+	}
+	
+	header h1{
+		margin-left: 20px;
+	}
+}

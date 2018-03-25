@@ -1,9 +1,0 @@
-proj07 - planejamento
-
-classes: 
-    .button = estilos padrão para todos os botões e com cor base definida, do botão maior
-
-    .bigButton = define o tamanho do botão maior
-    .smallButton = define o tamanho do botão menor e sua cor
-    
-    .textCenter = text-align: center;

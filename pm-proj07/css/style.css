@@ -21,13 +21,15 @@ h1,
 h2,
 h3,
 p {
-	margin: 0 0 10px 0;
+	margin: 0;
+	padding-bottom: 10px;
 	display: block;
 }
 
 figure {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 
 a {
@@ -42,6 +44,7 @@ a {
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 0 15px;
+	position: relative;
 }
 
 .clearfix::before,
@@ -55,11 +58,9 @@ a {
 
 .imgResonsive {
 	max-width: 100%;
-	display: block;
 }
 
 .btn {
-	margin-bottom: 10px;
 	border-radius: 3px;
 	font-weight: 300;
 	background-color: #ff3d7f;
@@ -77,7 +78,11 @@ a {
 	padding: 10px 0;
 	font-size: 3.5em;
 }
-.btnSmall {}
+.btnSmall {
+	max-width: 290px;
+	padding: 10px;
+	font-size: 2.3em;
+}
 
 
 /* GERAL
@@ -85,14 +90,16 @@ a {
 .wrap {
 	background: #5D52AE url(../img/bg-topo.png) no-repeat center top;
 	background-size: auto 828px;
+/*	max-height: 828px;*/
 }
 
 /* HEADER
 -----------------------------------------------------------*/
+#header{
+	padding-top: 30px;
+}
 .logoTitum {
-	padding: 10px 0;
 	height: 76px;
-	margin-top: 15px;
 	text-align: center;
 	background: url(../img/logo-titum.png) no-repeat center;
 }
@@ -105,12 +112,12 @@ a {
 
 #menu {
 	width: 100%;
-	padding: 0;
+	padding-top: 15px;
 	text-align: center;
 }
 #menu li a {
 	width: 100%;
-	max-width: 480px;
+	max-width: 200px;
 	margin-bottom: 10px;
 	padding: 10px 0;
 	font-size: 1.8em;
@@ -124,9 +131,11 @@ a {
 /* TOPO
 -----------------------------------------------------------*/
 #topo{
-	margin-bottom: 10px;
+	padding-bottom: 30px;
 }
 .destaqueTopo {
+	max-width: 460px;
+	margin: 0 auto;
 	text-align: center;
 }
 .destaqueTopo h2 {
@@ -143,7 +152,81 @@ a {
 /* CONHECA
 -----------------------------------------------------------*/
 #conheca{
+	padding: 20px 0;
 	background-color: #fff;
+}
+.destaqueConheca{
+	color: #000;
+	text-align: center;
+}
+.destaqueConheca .title{
+	font-size: 3.2em;
+	font-weight: 400;
+}
+.destaqueConheca .desc{
+	font-size: 2em;
+	font-weight: 300;
+}
+
+/* DEPOIMENTO
+-----------------------------------------------------------*/
+#depoimento{
+	padding: 20px  0;
+	color: #000;
+	text-align: center;
+	border-top: 3px solid #511099;
+	background: #ebe8fb;
+
+}
+#depoimento p{
+	font-size: 1.6em;
+}
+
+/* CONVITE
+-----------------------------------------------------------*/
+#convite{
+	padding: 30px 0;
+	background: url(../img/fundo-convite.png) no-repeat center top;
+	background-size: cover;
+	position: relative;
+}
+
+.campoConvite{
+	max-width: 610px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 0px;
+	border-radius: 3px;
+	background: #fff;
+}
+.campoConvite input{
+	width: calc(100% - 110px);
+	height: 50px;
+	font-size: 2.4em;
+	font-weight: 300;
+	color: #4a4a4a;
+	border: none;
+	outline: none;
+}
+.campoConvite button{
+	width: 90px;
+	height: 50px;
+	border: none;
+	background: #fff url(../img/btn-convite.png) no-repeat center;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+/* FOOTER
+-----------------------------------------------------------*/
+.footer{
+	padding: 35px 0;
+	text-align: center;
+	border-top: 3px solid #fff;
+	background: #2a0157;
+}
+.footer p{
+	font-size: 1.8em;
 }
 
 /* MEDIA QUERIES
@@ -157,17 +240,18 @@ a {
 	}
 }
 
-@media screen and (min-width: 560px){
-
-}
-
 @media screen and (min-width: 759px){
+	.btnSmall {
+		font-size: 3em;
+	}
+
 	#topo{
-		margin-bottom: 269px;
+		margin-bottom: 397px;
 		padding-top: 142px;
 	}
+
 	.destaqueTopo{
-		text-align: left;
+		margin: 0;
 	}
 
 	.logoTitum {
@@ -180,13 +264,13 @@ a {
 
 	#menu{
 		width: calc(100% - 200px);
-		margin-top: 30px;
 		float: right;
 		text-align: right;
 	}
 	#menu li{
 		padding-right: 10%;
 		display: inline-block;
+		float: right;
 	}
 
 	#menu li a{
@@ -194,6 +278,33 @@ a {
 	}
 
 	#conheca{
+		padding: 75px 0;
+	}
+	#conheca figure{
+		width: 42%;
+		border: 1px solid;
+		float: left;
+	}
+	.destaqueConheca{
+		width: 50%;
+		padding-top: 45px;
+		text-align: left;
+		float: right;
+	}
 
+	#depoimento {
+		padding: 65px 0 115px 0;
+	}
+
+	#depoimento p {
+		padding-top: 20px;
+		font-size: 2.4em;
+	}
+
+	#convite{
+		padding: 195px 0;
+	}
+	.campoConvite{
+		padding-left: 20px;
 	}
 }

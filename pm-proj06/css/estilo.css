@@ -1,5 +1,5 @@
 /*
-Alterações: 
+Alterações:
 	Aplicação da técnica image replacement
 	Substituição da tag p por h2 nos titulos dos cards
 */
@@ -42,7 +42,7 @@ li h2{
 	color: #4a4a4a;
 	text-align: left;
 	text-transform: uppercase;
-	
+
 }
 
 /* DESKTOP*/
@@ -50,8 +50,9 @@ li h2{
 	.container{
 		max-width: 960px;
 		margin: 0 auto;
+		border: 1px solid;
 	}
-	
+
 	li{
 		width: 50%;
 		margin-right: -3px;

@@ -1,0 +1,199 @@
+/* RESETS
+-----------------------------------------------------------*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 62.5%;
+	color: #fff;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0 0 10px 0;
+	display: block;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+/* CLASSES GERAIS
+-----------------------------------------------------------*/
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+	overflow: auto;
+	zoom: 1;
+}
+
+.imgResonsive {
+	max-width: 100%;
+	display: block;
+}
+
+.btn {
+	margin-bottom: 10px;
+	border-radius: 3px;
+	font-weight: 300;
+	background-color: #ff3d7f;
+	display: inline-block;
+	box-shadow: 0px 4px 0px #A32751;
+}
+.btn:active {
+	box-shadow: 0px 2px 0px #A32751;
+	position: relative;
+	top: 2px;
+}
+.btnLarge {
+	width: 100%;
+	max-width: 460px;
+	padding: 10px 0;
+	font-size: 3.5em;
+}
+.btnSmall {}
+
+
+/* GERAL
+-----------------------------------------------------------*/
+.wrap {
+	background: #5D52AE url(../img/bg-topo.png) no-repeat center top;
+	background-size: auto 828px;
+}
+
+/* HEADER
+-----------------------------------------------------------*/
+.logoTitum {
+	padding: 10px 0;
+	height: 76px;
+	margin-top: 15px;
+	text-align: center;
+	background: url(../img/logo-titum.png) no-repeat center;
+}
+
+.logoTitum span {
+	font-size: 2em;
+	opacity: 1;
+	display: none;
+}
+
+#menu {
+	width: 100%;
+	padding: 0;
+	text-align: center;
+}
+#menu li a {
+	width: 100%;
+	max-width: 480px;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	font-size: 1.8em;
+	border-radius: 5px;
+	display: inline-block;
+}
+#menu li a:hover {
+	border: 1px solid #fff;
+}
+
+/* TOPO
+-----------------------------------------------------------*/
+#topo{
+	margin-bottom: 10px;
+}
+.destaqueTopo {
+	text-align: center;
+}
+.destaqueTopo h2 {
+	font-size: 4.3em;
+	font-weight: 400;
+	color: #fff;
+}
+.destaqueTopo p {
+	font-size: 2.4em;
+	font-weight: 100;
+	color: #fff;
+}
+
+/* CONHECA
+-----------------------------------------------------------*/
+#conheca{
+	background-color: #fff;
+}
+
+/* MEDIA QUERIES
+-----------------------------------------------------------*/
+@media screen and (min-width: 479px){
+	.destaqueTopo h2 {
+		font-size: 5em;
+	}
+	.destaqueTopo p {
+		font-size:3.6em;
+	}
+}
+
+@media screen and (min-width: 560px){
+
+}
+
+@media screen and (min-width: 759px){
+	#topo{
+		margin-bottom: 269px;
+		padding-top: 142px;
+	}
+	.destaqueTopo{
+		text-align: left;
+	}
+
+	.logoTitum {
+		width: 176px;
+		height: 76px;
+		text-align: left;
+		background-position: left;
+		float: left;
+	}
+
+	#menu{
+		width: calc(100% - 200px);
+		margin-top: 30px;
+		float: right;
+		text-align: right;
+	}
+	#menu li{
+		padding-right: 10%;
+		display: inline-block;
+	}
+
+	#menu li a{
+		padding: 10px 20px;
+	}
+
+	#conheca{
+
+	}
+}

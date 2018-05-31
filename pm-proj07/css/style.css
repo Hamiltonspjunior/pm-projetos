@@ -1,47 +1,19 @@
 /* RESETS
 -----------------------------------------------------------*/
+* { box-sizing: border-box; }
 
-* {
-	box-sizing: border-box;
-}
+body { font-family: 'Lato', sans-serif; font-size: 62.5%; color: #fff; }
 
-body {
-	font-family: 'Lato', sans-serif;
-	font-size: 62.5%;
-	color: #fff;
-}
+ul, li { margin: 0; padding: 0; list-style: none; }
 
-ul,
-li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+h1, h2, h3, p { margin: 0; padding-bottom: 10px; display: block; }
 
-h1,
-h2,
-h3,
-p {
-	margin: 0;
-	padding-bottom: 10px;
-	display: block;
-}
+figure { margin: 0 0 10px 0; padding: 0; text-align: center; }
 
-figure {
-	margin: 0 0 10px 0;
-	padding: 0;
-	text-align: center;
-}
-
-a {
-	color: #fff;
-	text-align: center;
-	text-decoration: none;
-}
+a { color: #fff; text-align: center; text-decoration: none; display: inline-block; }
 
 /* CLASSES GERAIS
 -----------------------------------------------------------*/
-
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -49,6 +21,8 @@ a {
 	position: relative;
 }
 
+.container::before,
+.container::after,
 .clearfix::before,
 .clearfix::after {
 	content: "";
@@ -90,25 +64,21 @@ a {
 	font-size: 2.3em;
 }
 
-
 /* GERAL
 -----------------------------------------------------------*/
-
 .wrap {
 	background: #5D52AE url(../img/bg-topo.png) no-repeat center top;
 	background-size: auto 828px;
-	/*	max-height: 828px;*/
 }
 
 /* HEADER
 -----------------------------------------------------------*/
-
 #header {
-	padding-top: 30px;
+	padding-top: 20px;
 }
 
 .logoTitum {
-	height: 76px;
+	height: 80px;
 	text-align: center;
 	background: url(../img/logo-titum.png) no-repeat center;
 }
@@ -120,44 +90,37 @@ a {
 }
 
 #menu {
-	width: 100%;
-	padding-top: 15px;
 	text-align: center;
 }
-
-#menu li a {
-	width: 100%;
-	max-width: 200px;
-	margin-bottom: 10px;
-	padding: 10px 0;
-	font-size: 1.8em;
-	border-radius: 5px;
-	display: inline-block;
+#menu li{
+	margin-top: 10px;
 }
-
-#menu li a:hover {
+#menu a {
+	width: 100%;
+	max-width: 160px;
+	padding: 10px 20px;
+	font-size: 2em;
+	border-radius: 3px;
+}
+#menu a:hover {
 	border: 1px solid #fff;
 }
 
 /* TOPO
 -----------------------------------------------------------*/
-
 #topo {
 	padding-bottom: 30px;
 }
-
 .destaqueTopo {
 	max-width: 460px;
 	margin: 0 auto;
 	text-align: center;
 }
-
 .destaqueTopo h2 {
 	font-size: 4.3em;
 	font-weight: 400;
 	color: #fff;
 }
-
 .destaqueTopo p {
 	font-size: 2.4em;
 	font-weight: 100;
@@ -166,22 +129,18 @@ a {
 
 /* CONHECA
 -----------------------------------------------------------*/
-
 #conheca {
 	padding: 20px 0;
 	background-color: #fff;
 }
-
 .destaqueConheca {
 	color: #000;
 	text-align: center;
 }
-
 .destaqueConheca .title {
 	font-size: 3.2em;
 	font-weight: 400;
 }
-
 .destaqueConheca .desc {
 	font-size: 2em;
 	font-weight: 300;
@@ -189,7 +148,6 @@ a {
 
 /* DEPOIMENTO
 -----------------------------------------------------------*/
-
 #depoimento {
 	padding: 20px 0;
 	color: #000;
@@ -197,21 +155,18 @@ a {
 	border-top: 3px solid #511099;
 	background: #ebe8fb;
 }
-
 #depoimento p {
 	font-size: 1.6em;
 }
 
 /* CONVITE
 -----------------------------------------------------------*/
-
 #convite {
 	padding: 30px 0;
 	background: url(../img/fundo-convite.png) no-repeat center top;
 	background-size: cover;
 	position: relative;
 }
-
 .campoConvite {
 	max-width: 610px;
 	width: 100%;
@@ -220,7 +175,6 @@ a {
 	border-radius: 3px;
 	background: #fff;
 }
-
 .campoConvite input {
 	width: calc(100% - 80px);
 	height: 50px;
@@ -251,14 +205,12 @@ a {
 	border-top: 3px solid #fff;
 	background: #2a0157;
 }
-
 .footer p {
 	font-size: 1.8em;
 }
 
 /* MEDIA QUERIES
 -----------------------------------------------------------*/
-
 @media screen and (min-width: 479px) {
 	.destaqueTopo h2 {
 		font-size: 5em;
@@ -271,13 +223,16 @@ a {
 @media screen and (min-width: 759px) {
 	.btnSmall {
 		font-size: 3em;
+		padding: 20px 0;
+	}
+	.btnLarge {
+		padding: 20px 0;
 	}
 
 	#topo {
-		margin-bottom: 372px;
+		margin-bottom: 352px;
 		padding-top: 142px;
 	}
-
 	.destaqueTopo {
 		margin: 0;
 	}
@@ -291,16 +246,18 @@ a {
 	}
 
 	#menu {
-		width: calc(100% - 200px);
+		width: calc(100% - 185px);
+		text-align: center;
 		float: right;
-		text-align: right;
 	}
 	#menu li {
-		padding-right: 7%;
-		display: inline-block;
+		width: 33.33%;
+		float: left;
 	}
-	#menu li a {
+	#menu a {
 		padding: 10px 20px;
+		font-size: 2em;
+		border-radius: 3px;
 	}
 
 	#conheca {
@@ -333,13 +290,17 @@ a {
 		font-size: 2.4em;
 	}
 
+	#convite {
+		padding: 195px 0;
+	}
 	.campoConvite {
 		padding: 25px 20px;
 	}
 	.campoConvite input {
 		width: calc(100% - 95px);
+		font-size: 2.4em;
 	}
-	.campoConvite input::placeholder{
+	.campoConvite input::placeholder {
 		font-size: .99em;
 	}
 	.campoConvite button {
@@ -347,21 +308,5 @@ a {
 		height: 50px;
 		background-size: 85px 41px;
 		background-position: center;
-	}
-
-	#convite {
-		padding: 195px 0;
-	}
-	.campoConvite {
-		padding-left: 30px;
-	}
-	.campoConvite input {
-		font-size: 2.4em;
-	}
-}
-
-@media screen and (min-width: 880px) {
-	#menu li {
-		padding-right: 12%;
 	}
 }

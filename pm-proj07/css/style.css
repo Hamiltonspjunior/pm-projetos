@@ -18,6 +18,7 @@ a { color: #fff; text-align: center; text-decoration: none; display: inline-bloc
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 0 15px;
+	padding-bottom: 5px;
 }
 
 .container::before,
@@ -131,6 +132,7 @@ a { color: #fff; text-align: center; text-decoration: none; display: inline-bloc
 #conheca {
 	padding: 20px 0;
 	background-color: #fff;
+	overflow: hidden;
 }
 .destaqueConheca {
 	color: #000;

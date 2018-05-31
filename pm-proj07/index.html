@@ -29,7 +29,7 @@
 			</header>
 			<section id="topo">
 				<div class="container">
-					<div class="destaqueTopo">
+					<div class="destaqueTopo" data-animeOnload="top">
 						<h2>Conheça Titum</h2>
 						 <p>A nova moda do momento.</p>
 
@@ -39,10 +39,10 @@
 			</section>
 			<section id="conheca">
 				<div class="container">
-					<figure>
+					<figure data-anime="left">
 						<img src="img/conheca.png" alt="" class="imgResonsive">
 					</figure>
-					<div class="destaqueConheca">
+					<div class="destaqueConheca" data-anime="right">
 						<h3 class="title">Afinal, o que é o Titum?</h3>
 						<p class="desc">Titum é um novo movimento, que veio para
 						ficar. Lançado no último evento musical de
@@ -53,7 +53,7 @@
 				</div>
 			</section>
 			<section id="depoimento">
-				<div class="container">
+				<div class="container" data-anime="top">
 					<figure>
 						<img src="img/depoimento.png" alt="">
 					</figure>
@@ -78,5 +78,40 @@
 				</div>
 			</footer>
 		</div>
+		<script>
+			/*Animações*/
+			const targetOnload = document.querySelectorAll('[data-animeOnload]');
+			const target = document.querySelectorAll('[data-anime]');
+			const animationClass = 'animate';
+
+			/*Animação ao scroll*/
+			function animeScroll(){
+				const windowTop = window.pageYOffset + (window.innerHeight * 3)/4;
+				target.forEach(function(element){
+					if(windowTop > (element.offsetTop)){
+						element.classList.add(animationClass);
+					}
+					else{
+						element.classList.remove(animationClass);
+					}
+				});
+			}
+
+			function animeOnload(){
+				targetOnload.forEach(function(element){
+					element.classList.add(animationClass);
+				});
+			}
+
+			if(target.length){
+				window.addEventListener('scroll', function(){
+					animeScroll();
+				});
+			}
+
+			window.addEventListener('load', function(){
+				animeOnload();
+			});
+		</script>
 	</body>
 </html>

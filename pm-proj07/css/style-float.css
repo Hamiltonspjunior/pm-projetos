@@ -1,0 +1,355 @@
+/* RESETS
+-----------------------------------------------------------*/
+* { box-sizing: border-box; }
+
+body { font-family: 'Lato', sans-serif; font-size: 62.5%; color: #fff; }
+
+ul, li { margin: 0; padding: 0; list-style: none; }
+
+h1, h2, h3, p { margin: 0; padding-bottom: 10px; display: block; }
+
+figure { margin: 0 0 10px 0; padding: 0; text-align: center; }
+
+a { color: #fff; text-align: center; text-decoration: none; display: inline-block; }
+
+/* CLASSES GERAIS
+-----------------------------------------------------------*/
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 0 15px;
+	padding-bottom: 5px;
+}
+
+.container::before,
+.container::after,
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+	overflow: auto;
+	zoom: 1;
+}
+
+.imgResonsive {
+	max-width: 100%;
+}
+
+.btn {
+	border-radius: 3px;
+	font-weight: 300;
+	background-color: #ff3d7f;
+	display: inline-block;
+	box-shadow: 0px 4px 0px #A32751;
+}
+
+.btn:active {
+	box-shadow: 0px 2px 0px #A32751;
+	position: relative;
+	top: 2px;
+}
+
+.btnLarge {
+	width: 100%;
+	max-width: 460px;
+	padding: 10px 0;
+	font-size: 3.5em;
+}
+
+.btnSmall {
+	max-width: 290px;
+	width: 70%;
+	padding: 10px;
+	font-size: 2.3em;
+}
+
+.voltarTopo{
+	color: #64037b;
+	font-size: 4em;
+	border-radius: 50%;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 1;
+	outline: none;
+	opacity: 0;
+	transition: all .8s;
+	visibility: hidden;
+}
+
+/* GERAL
+-----------------------------------------------------------*/
+.wrap {
+	background: #5D52AE url(../img/bg-topo.png) no-repeat center top;
+	background-size: auto 828px;
+}
+
+/* HEADER
+-----------------------------------------------------------*/
+#header {
+	padding-top: 20px;
+}
+
+.logoTitum {
+	height: 80px;
+	text-align: center;
+	background: url(../img/logo-titum.png) no-repeat center;
+}
+
+.logoTitum span {
+	font-size: 2em;
+	opacity: 1;
+	display: none;
+}
+
+#menu {
+	text-align: center;
+}
+#menu li{
+	margin-top: 10px;
+}
+#menu a {
+	width: 100%;
+	max-width: 160px;
+	padding: 10px 20px;
+	font-size: 2em;
+	border-radius: 3px;
+}
+#menu a:hover {
+	border: 1px solid #fff;
+}
+
+/* TOPO
+-----------------------------------------------------------*/
+#topo {
+	padding-bottom: 30px;
+}
+.destaqueTopo {
+	max-width: 460px;
+	margin: 0 auto;
+	text-align: center;
+}
+.destaqueTopo h2 {
+	font-size: 4.3em;
+	font-weight: 400;
+	color: #fff;
+}
+.destaqueTopo p {
+	font-size: 2.4em;
+	font-weight: 100;
+	color: #fff;
+}
+
+/* CONHECA
+-----------------------------------------------------------*/
+#conheca {
+	padding: 20px 0;
+	background-color: #fff;
+	overflow: hidden;
+}
+.destaqueConheca {
+	color: #000;
+	text-align: center;
+}
+.destaqueConheca .title {
+	font-size: 3.2em;
+	font-weight: 400;
+}
+.destaqueConheca .desc {
+	font-size: 2em;
+	font-weight: 300;
+}
+
+/* DEPOIMENTO
+-----------------------------------------------------------*/
+#depoimento {
+	padding: 20px 0;
+	color: #000;
+	text-align: center;
+	border-top: 3px solid #511099;
+	background: #ebe8fb;
+}
+#depoimento p {
+	font-size: 1.6em;
+}
+
+/* CONVITE
+-----------------------------------------------------------*/
+#convite {
+	padding: 30px 0;
+	background: url(../img/fundo-convite.png) no-repeat center top;
+	background-size: cover;
+	position: relative;
+}
+.campoConvite {
+	max-width: 610px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px;
+	border-radius: 3px;
+	background: #fff;
+}
+.campoConvite input {
+	width: calc(100% - 80px);
+	height: 50px;
+	font-size: 1.9em;
+	font-weight: 300;
+	color: #4a4a4a;
+	border: none;
+	outline: none;
+	float: left;
+}
+
+.campoConvite button {
+	width: 70px;
+	height: 50px;
+	border: none;
+	background: #fff url(../img/btn-convite.png) no-repeat center;
+	background-size: 70px auto;
+	cursor: pointer;
+	vertical-align: bottom;
+	float: right;
+}
+
+/* FOOTER
+-----------------------------------------------------------*/
+.footer {
+	padding: 35px 0;
+	text-align: center;
+	border-top: 3px solid #fff;
+	background: #2a0157;
+}
+.footer p {
+	font-size: 1.8em;
+}
+
+/* MEDIA QUERIES
+-----------------------------------------------------------*/
+@media screen and (min-width: 479px) {
+	.destaqueTopo h2 {
+		font-size: 5em;
+	}
+	.destaqueTopo p {
+		font-size: 3.6em;
+	}
+}
+
+@media screen and (min-width: 759px) {
+	.btnSmall {
+		font-size: 3em;
+		padding: 20px 0;
+	}
+	.btnLarge {
+		padding: 20px 0;
+	}
+
+	#topo {
+		margin-bottom: 352px;
+		padding-top: 142px;
+	}
+	.destaqueTopo {
+		margin: 0;
+	}
+
+	.logoTitum {
+		width: 176px;
+		height: 76px;
+		text-align: left;
+		background-position: left;
+		float: left;
+	}
+
+	#menu {
+		width: calc(100% - 185px);
+		text-align: center;
+		float: right;
+	}
+	#menu li {
+		width: 33.33%;
+		float: left;
+	}
+	#menu a {
+		padding: 10px 20px;
+		font-size: 2em;
+		border-radius: 3px;
+	}
+
+	#conheca {
+		padding: 75px 0;
+	}
+	#conheca figure {
+		width: 42%;
+		border: 1px solid;
+		float: left;
+	}
+	.destaqueConheca {
+		width: 50%;
+		padding-top: 45px;
+		text-align: left;
+		float: right;
+	}
+	.destaqueConheca .title {
+		padding-bottom: 20px;
+		font-size: 3.6em;
+	}
+	.destaqueConheca .desc {
+		font-size: 2.4em;
+		padding-bottom: 30px;
+	}
+
+	#depoimento {
+		padding: 65px 0 115px 0;
+	}
+	#depoimento p {
+		font-size: 2.4em;
+	}
+
+	#convite {
+		padding: 195px 0;
+	}
+	.campoConvite {
+		padding: 25px 20px;
+	}
+	.campoConvite input {
+		width: calc(100% - 95px);
+		font-size: 2.4em;
+	}
+	.campoConvite input::placeholder {
+		font-size: .99em;
+	}
+	.campoConvite button {
+		width: 85px;
+		height: 50px;
+		background-size: 85px 41px;
+		background-position: center;
+	}
+}
+
+/* ANIMAÇÃO
+-----------------------------------------------------------*/
+[data-anime]{
+	opacity: 0;
+	transition: .3s;
+}
+[data-anime="top"]{
+	transition: 1.5s;
+	transform: translate3d(0, -50px, 0);
+}
+[data-anime="left"]{
+	transform: translate3d(-80px, 0, 0);
+}
+[data-anime="right"]{
+	transform: translate3d(80px, 0, 0);
+}
+[data-animeOnload="top"]{
+	opacity: 0;
+	transition: 1s;
+	transform: translate3d(0, -30px, 0);
+}
+
+[data-anime].animate,
+[data-animeOnload].animate{
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}

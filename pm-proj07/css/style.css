@@ -1,154 +1,184 @@
 /* RESETS
 -----------------------------------------------------------*/
-* { box-sizing: border-box; }
+*,
+h1,
+h2,
+h3,
+figure{ margin: 0; padding: 0; box-sizing: border-box; }
+*:before, *:after { content: ''; margin: 0; padding: 0; box-sizing: border-box;}
 
-body { font-family: 'Lato', sans-serif; color: #000; }
+html,
+:root{font-size: 7.5px;}
+ul{list-style: none; }
+a{color: #ffffff; text-decoration: none;}
 
-ul, li { margin: 0; padding: 0; list-style: none; }
-
-h1, h2, h3, p { margin: 0; padding-bottom: 10px; display: block; }
-
-figure { margin: 0 0 10px 0; padding: 0; text-align: center; }
-
-a { color: #fff; text-decoration: none; display: inline-block; }
-
-/* CLASSES GERAIS
+/* HELPERS
 -----------------------------------------------------------*/
-.container {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 0 15px;
-	padding-bottom: 5px;
-}
-.container::before,
-.container::after,
-.clearfix::before,
-.clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
-	overflow: auto;
-	zoom: 1;
-}
-
-.imgResonsive {
+.img-responsive{
 	max-width: 100%;
+	display: block;
 }
 
-.btn {
+.btn{
+	font-weight: 100;
+	text-align: center;
 	border-radius: 3px;
-	font-weight: 300;
-	background-color: #ff3d7f;
-	display: inline-block;
-	box-shadow: 0px 4px 0px #A32751;
-}
-
-.btn:active {
-	box-shadow: 0px 2px 0px #A32751;
-	position: relative;
-	top: 2px;
-}
-.btnLarge {
-	width: 100%;
-	max-width: 460px;
-	padding: 10px 0;
-	font-size: 3.5em;
-}
-.btnSmall {
-	max-width: 290px;
-	width: 70%;
-	padding: 10px;
-	font-size: 2.3em;
-}
-
-.voltarTopo{
-	color: #64037b;
-	font-size: 4em;
-	border-radius: 50%;
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
-	z-index: 1;
-	outline: none;
-	opacity: 0;
-	transition: all .8s;
-	visibility: hidden;
+	background: #e64766;
+	display: block;
+	box-shadow: 0 6px 0 #a32751;
 }
 
 /* GERAL
 -----------------------------------------------------------*/
-
+body { font-family: 'Lato', sans-serif; color: #000; background: #431d5f;}
+.container{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1rem;
+}
 
 /* HEADER
 -----------------------------------------------------------*/
-
-.logoTitum {
-	height: 80px;
-	text-align: center;
-	background: url(../img/logo-titum.png) no-repeat center;
+.header{
+	color: #fff;
 }
+	.header__logo{
+		font-size: 3.6rem;
+	}
 
-.logoTitum span {
-	font-size: 2em;
-	opacity: 1;
-	display: none;
+/* MENU
+-----------------------------------------------------------*/
+.menu__link{
+	font-size: 2rem;
 }
-
 
 /* TOPO
 -----------------------------------------------------------*/
-
+.topo{
+	min-height: calc(100vh - 130px);
+	color: #fff;
+	background-image: url(../img/bg-topo.png) no-repeat center;
+}
+	.conhecaTitum{
+		max-width: 460px;
+		text-align: center;
+	}
+		.conhecaTitum__title{
+			font-size: 5rem;
+			font-weight: 500;
+		}
+		.conhecaTitum__slogan{
+			font-size: 3.6rem;
+			padding: .7rem 0 2.5rem;
+			font-weight: 300;
+		}
+		.conhecaTitum__btn{
+			padding: 1.5rem 0;
+			font-size: 3.6rem;
+		}
 
 /* CONHECA
 -----------------------------------------------------------*/
-
+.conheca{
+	text-align: center;
+	background: #fff;
+}
+.descTitum__title{
+	font-size: 3.6rem;
+	font-weight: 500;
+}
+.descTitum__text{
+	font-size: 2.4rem;
+	font-weight: 300;
+}
+.descTitum__btn{
+	font-size: 3rem;
+	padding: 1.5rem;
+}
 
 /* DEPOIMENTO
 -----------------------------------------------------------*/
+.depoimento{
+	padding: 6.5rem 0 11.5rem;
+	background: #ebe8fb;
+	text-align: center;
+}
+	.depoimento__text{
+		font-size: 2.4rem;
+		font-weight: 300;
+	}
 
 
 /* CONVITE
 -----------------------------------------------------------*/
+.convite{
+	padding: 7rem 0;
+	background: #431d5f url(../img/fundo-convite.png) no-repeat center;
+	background-size: cover;
+}
+	.convite__form{
+		max-width: 640px;
+		margin: 0 auto;
+		padding: 2rem;
+		border-radius: 3px;
+		background: #fff;
+	}
+		.convite__field{
+			width: calc(100% - 90px);
+			height: 43px;
+			padding-right: 1rem;
+			font-size: 2rem;
+			color: #4a4a4a;
+			border: none;
+			outline: none;
+		}
+			.convite__field::-webkit-input-placeholder {
+				font-size: 2rem;
+				color: #4a4a4a;
+			}
+			.convite__field:-ms-input-placeholder {
+				font-size: 2rem;
+				color: #4a4a4a;
+			}
+			.convite__field:placeholder{
+				font-size: 2rem;
+				color: #4a4a4a;
+			}
+		.convite__btn{
+			width: 87px;
+			height: 43px;
+			font-size: 3rem;
+			color: rgba(74, 74, 74, 0);
+			border: none;
+			border-radius: 3px;
+			background: url(../img/btn-convite.png) no-repeat center;
+			background-color: transparent;
+			cursor: pointer;
+		}
 
 
 /* FOOTER
 -----------------------------------------------------------*/
+.footer{
+	padding: 3.5rem 0;
+	text-align: center;
+}
+	.footer__text{
+		font-size: 1.8rem;
+		font-weight: 300;
+		color: #fff;
+	}
 
 
 /* MEDIA QUERIES
 -----------------------------------------------------------*/
-@media screen and (min-width: 479px) {
-
+@media (min-width: 768px){
+	html,
+	:root{font-size: 10px;}
 }
 
-@media screen and (min-width: 759px) {
 
-}
 
-/* ANIMAÇÃO
------------------------------------------------------------*/
-[data-anime]{
-	opacity: 0;
-	transition: .3s;
-}
-[data-anime="top"]{
-	transition: 1.5s;
-	transform: translate3d(0, -50px, 0);
-}
-[data-anime="left"]{
-	transform: translate3d(-80px, 0, 0);
-}
-[data-anime="right"]{
-	transform: translate3d(80px, 0, 0);
-}
-[data-animeOnload="top"]{
-	opacity: 0;
-	transition: 1s;
-	transform: translate3d(0, -30px, 0);
-}
 
-[data-anime].animate,
-[data-animeOnload].animate{
-	opacity: 1;
-	transform: translate3d(0, 0, 0);
-}
+
+

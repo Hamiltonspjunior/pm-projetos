@@ -50,12 +50,11 @@ li h2{
 	.container{
 		max-width: 960px;
 		margin: 0 auto;
-		border: 1px solid;
 	}
 
 	li{
 		width: 50%;
-		margin-right: -3px;
+		margin-right: -4px;
 		display: inline-block;
 		vertical-align: top;
 	}

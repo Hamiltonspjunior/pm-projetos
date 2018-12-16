@@ -132,7 +132,7 @@ button { border: none; }
             outline: none;
         }
         .convite-form input::placeholder{
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: 400;
         }
         .convite-form .btn-convite {

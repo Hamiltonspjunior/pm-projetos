@@ -26,10 +26,12 @@ button { border: none; }
     padding: 3.2rem 1.3rem;
     display: flex;
     flex-direction: column;
+    align-content: flex-start;
     position: relative;
 }
 
 .btn {
+    width: 100%;
     margin-bottom: 20px;
     padding: 1.6rem 0;
     background-color: #ff3d7f;
@@ -58,19 +60,20 @@ button { border: none; }
 }
 
 .menu .menu-item { 
-    margin: 1.5rem 0;  
-    
+    margin: 0 0 1.5rem;  
 }
 .menu .menu-link {
+    max-width: 375px;
     width: 100%;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem 3rem;
     border: 1px solid #fff;
     border-radius: 3px;
     text-align: center;
     display: block;
 }
 
+/* BG DO TOPO */
 .wraper {
     background: url(../img/bg-topo.png) no-repeat center;
     background-size: cover;
@@ -86,10 +89,11 @@ button { border: none; }
 /* CONHEÇA */
 .conheca {
     background: #fff;
+    text-align: center;
 }
     .conheca .title {
         font-weight: 300;
-        text-align: center;
+        
     }
 
 /* DEPOIMENTO */
@@ -103,6 +107,7 @@ button { border: none; }
 .convite {
     background: url(../img/fundo-convite.png) no-repeat center;
     background-size: cover;
+    display: flex;
 }
     .convite .container {
         min-height: 150px;
@@ -111,29 +116,40 @@ button { border: none; }
     }
     .convite .convite-form {
         width: 100%;
-        padding: .3rem 1rem;
+        padding: .3rem .8rem;
         background: #fff;
         border-radius: 3px;
         display: flex;
+        align-items: center;
     }
         .convite-form input {
-            padding: 1rem 0;
-            font-size: 2.4rem;
+            width: calc(100% - 90px);
+            padding: 1.5rem 0;
+            padding-right: .5rem;
+            font-size: 1.6rem;
             font-weight: 400;
             border: none;
             flex-grow: 1;
             flex-shrink: 0;
+            outline: none;
         }
         .convite-form input::placeholder{
-            font-size: 2.4rem;
+            font-size: 1rem;
             font-weight: 400;
         }
-        .convite-form button {
-            
+        .convite-form .btn-convite {
+            width: 65px;
+            height: 31px;
+            font-size: 2.2rem;
+            background: url(../img/btn-convite.png) no-repeat center;
+            background-size: 65px 31px;
+            cursor: pointer;
         }
 
 /* FOOTER */
-.footer { 
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     border-top: 3px solid #fff; 
 }
     .footer .text { 
@@ -144,6 +160,23 @@ button { border: none; }
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 320px){
+    .btn-large{
+        max-width: 460px;
+    }
+    .btn-small{
+        max-width: 290px;
+    }
+}
+
+@media (min-width: 480px){
+    
+
+    .convite .convite-form {
+        width: 66.77%;
+    }
+}
+
 @media (min-width: 768px){
     /* ELEMENTOS */ 
     h2 { font-size: 5rem; line-height: 5.2rem; }
@@ -151,6 +184,11 @@ button { border: none; }
     p { font-size: 2.4rem; line-height: 2.6rem; margin-bottom: 4rem; }
 
     /* CLASSES GERAIS */
+    .container {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
     .btn-large{
         padding: 2.2rem 0;
     }
@@ -163,8 +201,76 @@ button { border: none; }
         height: 828px;
     }
 
+    /* HEADER */
+    .header .container {
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+        flex-direction: row;
+        align-content: center;
+    }
+        .header .logo-titum {
+            max-width: 176px;
+            margin: 0;
+        }
+        .menu {
+            width: 100%;
+            display: flex;
+        }
+        .menu .inner-menu {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center;
+        }
+            .menu .menu-item {
+                margin: 0;
+                margin-right: 3rem;
+            }
+                .menu .menu-link {
+                    border: none;
+                }
+                .menu .menu-link:hover {
+                    border: 1px solid #fff;
+                }
+
+    /* TOPO */
+    .topo .content {
+        width: 47.91%;
+        padding-top: 14.2rem; 
+    }
+
+    /* CONHECA */
+    .conheca .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .conheca .content {
+            width: 47.91%;
+            text-align: left;
+        }
+        .conheca figure { margin-right: 3rem; }
+
     /* CONVITE */
+    .convite {
+        height: 424px;
+    }
     .convite .convite-form {
         width: 66.77%;
+        padding: 2rem;
+    }
+        .convite-form input,
+        .convite-form input::placeholder {
+            font-size: 2.4rem;
+        }
+    
+    .footer {
+        padding: 0;
+    }
+}
+
+@media (min-width: 860px){
+    .menu .menu-item {
+        margin-right: 6rem;
     }
 }

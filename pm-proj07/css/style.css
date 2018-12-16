@@ -71,9 +71,16 @@ button { border: none; }
     display: block;
 }
 
+.wraper {
+    background: url(../img/bg-topo.png) no-repeat center;
+    background-size: cover;
+}
+
 /* TOPO */
 .topo {
     color: #fff;
+    text-align: center;
+    
 }
 
 /* CONHEÇA */
@@ -82,13 +89,48 @@ button { border: none; }
 }
     .conheca .title {
         font-weight: 300;
+        text-align: center;
     }
 
 /* DEPOIMENTO */
 .depoimento {
     background: #fff;
     border-top: 3px solid #511099;
+    text-align: center;
 }
+
+/* CONVITE */
+.convite {
+    background: url(../img/fundo-convite.png) no-repeat center;
+    background-size: cover;
+}
+    .convite .container {
+        min-height: 150px;
+        justify-content: center;
+        align-items: center;
+    }
+    .convite .convite-form {
+        width: 100%;
+        padding: .3rem 1rem;
+        background: #fff;
+        border-radius: 3px;
+        display: flex;
+    }
+        .convite-form input {
+            padding: 1rem 0;
+            font-size: 2.4rem;
+            font-weight: 400;
+            border: none;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+        .convite-form input::placeholder{
+            font-size: 2.4rem;
+            font-weight: 400;
+        }
+        .convite-form button {
+            
+        }
 
 /* FOOTER */
 .footer { 
@@ -114,5 +156,15 @@ button { border: none; }
     }
     .btn-small{
         padding: 1.8rem 0;
+    }
+
+    /* TOPO */
+    .wraper {
+        height: 828px;
+    }
+
+    /* CONVITE */
+    .convite .convite-form {
+        width: 66.77%;
     }
 }

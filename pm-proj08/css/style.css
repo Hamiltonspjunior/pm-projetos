@@ -10,24 +10,44 @@ a { text-decoration: none; }
 /* TOPBAR */
 .topbar {
    height: 6rem;
-   padding-right: 1rem;
+   padding-right: 2rem;
    background: #242536;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
    align-items: center;
 }
    .logo {
       width: 20rem;
       height: 6rem;
       background: #151524;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
    }
 
+.inner-wrapper {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+}
+
 /* ASIDE */
+.sidebar {
+   max-width: 200px;
+   background: #242536;
+}
 
 /* MENU */
 
